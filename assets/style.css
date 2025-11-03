@@ -1,0 +1,128 @@
+/* ====== RESET & VARIABLES ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #f4f6f8;
+  --primary-color: #2b6cb0;
+  --secondary-color: #2d3748;
+  --text-color: #333;
+  --card-bg: #fff;
+  --border-radius: 10px;
+}
+
+/* ====== BODY & LAYOUT ====== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: grid;
+  grid-template-columns: 220px 1fr 300px;
+  gap: 20px;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* ====== SIDEBAR ====== */
+nav {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  height: fit-content;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #90cdf4;
+}
+
+/* ====== HEADER ====== */
+header {
+  grid-column: 1 / 4;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  color: var(--primary-color);
+}
+
+/* ====== MAIN CONTENT ====== */
+main {
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ====== TABLE ====== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 12px 10px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #edf2f7;
+}
+
+/* ====== SUMMARY ====== */
+aside {
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  grid-column: 1 / 4;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* ====== RESPONSIVE DESIGN ====== */
+@media (max-width: 900px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  aside {
+    order: 3;
+  }
+}
